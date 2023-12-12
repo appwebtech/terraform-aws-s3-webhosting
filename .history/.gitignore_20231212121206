@@ -1,0 +1,12 @@
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+
+# Ignore .tfvars (may be required if running CI/CD with CircleCi)
+*.tfvars
