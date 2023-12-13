@@ -1,3 +1,5 @@
+# This terraform block houses a cloud block with arguments in which attributes must be configured in TF cloud. Please see the [link](https://developer.hashicorp.com/terraform/language/settings/terraform-cloud)
+
 terraform {
   required_providers {
     aws = {
