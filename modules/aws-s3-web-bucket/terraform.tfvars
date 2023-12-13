@@ -1,1 +1,1 @@
-your_region = "eu-west-1"
+your_region = "eu-west-2"
