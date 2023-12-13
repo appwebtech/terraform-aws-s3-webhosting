@@ -18,7 +18,7 @@ variable "unique-bucket-name" {
   type = map(string)
   default = {
     name = "your-bucket-name"
-    env  = "bucket-env-or-purpose"
+    env  = "prod"
   }
   description = "A unique bucket name with a randomized suffix"
 }
