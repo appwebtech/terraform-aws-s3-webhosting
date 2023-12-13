@@ -9,5 +9,5 @@ modules/aws-s3-web-bucket/*.terraform
 # Crash log files
 crash.log
 
-# Ignore .tfvars (may be required if running CI/CD with CircleCi)
-*.tfvars
+# Unignore .tfvars (required if running CI/CD with CircleCi and Actions ~ Disabling, no sensitive variables)
+# *.tfvars
