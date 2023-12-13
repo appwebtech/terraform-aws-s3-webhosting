@@ -1,5 +1,6 @@
 # Local .terraform directories
 **/.terraform/*
+modules/aws-s3-web-bucket/*.terraform
 
 # .tfstate files
 *.tfstate
