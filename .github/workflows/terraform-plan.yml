@@ -1,9 +1,7 @@
 name: "Terraform Plan"
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
 
 env:
   TF_CLOUD_ORGANIZATION: "AWS-Cloud-Resume-2023"
