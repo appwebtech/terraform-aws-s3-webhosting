@@ -11,3 +11,7 @@ crash.log
 
 # Unignore .tfvars (required if running CI/CD with CircleCi and Actions ~ Disabling, no sensitive variables)
 # *.tfvars
+
+# Ignore .history
+.history/*
+.history/**
