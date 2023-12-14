@@ -50,6 +50,50 @@ resource "aws_s3_bucket_acl" "web_bucket_acl" {
   acl = "public-read"
 }
 
+# Enable bucket versioning
+resource "aws_s3_bucket_versioning" "web_bucket_public" {
+  bucket = aws_s3_bucket.web_bucket_name.id
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
+
+# Bucket encryption
+resource "aws_kms_key" "web_bucket_public_key" {
+  description             = "Encryption key for bucket objects"
+  deletion_window_in_days = 10
+}
+
+resource "aws_s3_bucket_server_side_encryption_configuration" "web_bucket_public_encryption" {
+  bucket = aws_s3_bucket.web_bucket_name.id
+
+  rule {
+    apply_server_side_encryption_by_default {
+      kms_master_key_id = aws_kms_key.web_bucket_public_key.arn
+      sse_algorithm     = "aws:kms"
+    }
+  }
+}
+
+# Configure Bucket CORS (Add your origin and configure the rules)
+resource "aws_s3_bucket_cors_configuration" "web_bucket_public" {
+  bucket = aws_s3_bucket.web_bucket_name.id
+
+  cors_rule {
+    allowed_headers = ["*"]
+    allowed_methods = ["PUT", "POST"]
+    allowed_origins = ["https://s3-website-test.hashicorp.com"]
+    expose_headers  = ["ETag"]
+    max_age_seconds = 3000
+  }
+
+  cors_rule {
+    allowed_methods = ["GET"]
+    allowed_origins = ["*"]
+  }
+}
+
+
 # Create bucket policy
 resource "aws_s3_bucket_policy" "web_bucket_policy" {
   depends_on = [
