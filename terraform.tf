@@ -4,7 +4,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 5.0" # Downgraded AWS version due to a bug (https://github.com/hashicorp/terraform-provider-aws/issues/34351) in retreaving caller identity from STS
+      version = "~> 5.0" 
     }
   }
   required_version = "~> 1.2"
