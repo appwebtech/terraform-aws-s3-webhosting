@@ -4,6 +4,7 @@
 [![License: Apache](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Repo-size](https://img.shields.io/github/repo-size/appwebtech/terraform-aws-s3-webhosting?labelColor=844FBA)](https://github.com/appwebtech/terraform-aws-s3-webhosting)
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
+[!![Static Badge](https://img.shields.io/badge/github_actions-blue)](https://github.com/appwebtech/terraform-aws-s3-webhosting/actions)
 
 ## AWS S3 Bucket with Web Hosting Capabilities
 
@@ -49,6 +50,27 @@ variable "unique-bucket-name" {
     env  = "prod"
   }
   description = "A unique bucket name with a randomized suffix"
+}
+```
+
+If you are not utilizing Terraform Cloud, please feel free to comment out the nested cloud block from the top-level terraform block. However, if you intend to persist your state files on the cloud, a Terraform Cloud setup is necessary.
+
+```tf
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+  required_version = "~> 1.2"
+
+  cloud {
+    organization = "YOUR-ORGANIZATION"
+    workspaces {
+      name = "YOU-WORKSPACE"
+    }
+  }
 }
 ```
 
