@@ -13,7 +13,7 @@ env:
 
 jobs:
   terraform:
-    if: github.repository == 'appwebtech/terraform-aws-s3-webhosting'
+    if: github.repository != 'appwebtech/AWS-Resume'
     name: "Terraform Plan"
     runs-on: ubuntu-latest
     permissions:
