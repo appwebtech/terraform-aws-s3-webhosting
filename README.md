@@ -1,15 +1,15 @@
 # Terraform Module for AWS S3
 
-[![Terraform](https://img.shields.io/badge/Terraform-%23844FBA)](https://github.com/appwebtech/terraform-aws-s3-webhosting)
+[![Terraform](https://img.shields.io/badge/Terraform-%23844FBA)](https://releases.hashicorp.com/terraform/)
 [![License: Apache](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Repo-size](https://img.shields.io/github/repo-size/appwebtech/terraform-aws-s3-webhosting?labelColor=844FBA)](https://github.com/appwebtech/terraform-aws-s3-webhosting)
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
-[!![Static Badge](https://img.shields.io/badge/github_actions-blue)](https://github.com/appwebtech/terraform-aws-s3-webhosting/actions)
+[![Static Badge](https://img.shields.io/badge/github_actions-blue)](https://github.com/appwebtech/terraform-aws-s3-webhosting/actions)
 
 ## AWS S3 Bucket with Web Hosting Capabilities
 
 This module will spin up the necessary infrastructure to host a website in AWS S3. The bucket is publicly accessible for API Get requests.
-To keep costs at a minimum, I've employed a minimalist approach (*I didn't implement cross-region replication, CDN, Logging, encryption, lifecycle etc*) whilst  ensuring full functionality. 
+To keep costs at a minimum, I've employed a minimalist approach (*I didn't implement cross-region replication, CDN, Logging, encryption, lifecycle etc*) whilst  ensuring full functionality.
 
 ## Requirements
 
@@ -31,7 +31,7 @@ To be added after deployment to Terraform Cloud
 
 ## Usage
 
-Ensure you have Terraform installed in your environment. Visit the [Harshicorp website](https://developer.hashicorp.com/terraform/install) for both CLI and binary installations in various operating systems.
+Please ensure you have Terraform installed in your environment. Visit the [Harshicorp website](https://developer.hashicorp.com/terraform/install) for both CLI and binary installations on various operating systems.
 
 In macOS, I usually manage my package installations with [Homebrew](https://brew.sh/) which is ideal in this scenario.
 

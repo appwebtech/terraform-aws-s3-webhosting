@@ -1,4 +1,5 @@
-# This terraform block houses a cloud block with arguments in which attributes must be configured in TF cloud. Please see the [link](https://developer.hashicorp.com/terraform/language/settings/terraform-cloud)
+# This terraform block houses a nested cloud block with arguments in which attributes must be configured in TF cloud.
+# The 'organization' and 'name' values will need to be substituted with your own values if you want to store your state file remotely in TF Cloud.
 
 terraform {
   required_providers {
