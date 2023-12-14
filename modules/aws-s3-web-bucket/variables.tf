@@ -10,4 +10,3 @@ variable "resource-tags" {
   default     = {}
   description = "Tags to be applied on bucket resource"
 }
-
