@@ -53,7 +53,7 @@ variable "unique-bucket-name" {
 }
 ```
 
-If you are not utilizing Terraform Cloud, please feel free to comment out the nested cloud block from the top-level terraform block. However, if you intend to persist your state files on the cloud, a Terraform Cloud setup is necessary.
+If you are not utilizing Terraform Cloud, please feel free to comment out the nested cloud block in `terraform.tf` root configuration file. However, if you intend to persist your state files on the cloud, a Terraform Cloud setup is necessary.
 
 ```tf
 terraform {
@@ -87,4 +87,4 @@ terraform {
 | [aws_s3_bucket_versioning.website](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_versioning) | resource |
 | [aws_s3_bucket_ownership_controls](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_ownership_controls) | resource |
 | [aws_s3_bucket_website_configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_website_configuration) | resource |
-| [random_uuid](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/uuid) resource |
+| [random_uuid](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/uuid) | resource |
