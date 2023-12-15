@@ -40,7 +40,7 @@ To avoid backward incompatibility, you may need to upgrade your environment to `
 AWS S3 buckets are unique globally. To avoid creation failure due to duplicates, I've incorporated [random_uuid](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/uuid) resource. To supply a unique bucket name;
 
 * Open `variables.tf` config file of the main root module.
-* Add your bucket name under the `name` and `env` keys of the `unique-bucket-name` variable.
+* Add your bucket name under the `name` and `env` key values of the `unique-bucket-name` variable.
 
 ```tf
 variable "unique-bucket-name" {
