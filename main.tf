@@ -10,7 +10,6 @@ module "aws-web-bucket" {
 
 }
 
-
 # S3 Bucket object source and Encryption
 resource "aws_s3_object" "web_bucket-objects" {
   key                    = "your-source-code.zip"
